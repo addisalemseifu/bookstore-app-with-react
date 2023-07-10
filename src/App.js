@@ -1,8 +1,11 @@
+import { Routes, Route } from 'react-router-dom';
+
 function App() {
   return (
-    <div className="App">
-      hellow
-    </div>
+    <Routes>
+      <Route path="/" />
+      <Route path="/catagories" />
+    </Routes>
   );
 }
 
