@@ -7,7 +7,7 @@ export default function Navigation() {
     <nav>
       <h3>Bookstore CMC</h3>
       <li><Link to="/">Home</Link></li>
-      <li><Link to="/categories">Categories</Link></li>
+      <li><Link to="/catagories">Categories</Link></li>
       <User />
     </nav>
   );
