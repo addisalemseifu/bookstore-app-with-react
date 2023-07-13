@@ -146,6 +146,17 @@ p {
 
 /*
 ===============
+Category
+===============
+*/
+
+.category {
+  display: flex;
+  justify-content: center;
+}
+
+/*
+===============
 Navbar
 ===============
 */

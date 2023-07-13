@@ -1,9 +1,7 @@
-export default function Bookstate( // eslint-disable-next-line react/prop-types
-  {
-  // eslint-disable-next-line react/prop-types
-    itemid, title, category, removeBook,
-  },
-) {
+import React from 'react';
+
+export default function Bookstate(props) {
+  const { itemid, title, category, removeBook } = props;
   const handleRemove = () => {
     removeBook(itemid);
   };
