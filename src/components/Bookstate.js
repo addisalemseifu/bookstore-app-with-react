@@ -1,7 +1,9 @@
 import React from 'react';
 
 export default function Bookstate(props) {
-  const { itemid, title, category, removeBook } = props;
+  const {
+    itemid, title, category, removeBook,
+  } = props;
   const handleRemove = () => {
     removeBook(itemid);
   };
