@@ -1,11 +1,14 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/bookSlice';
 
 export default function Bookstate(props) {
   const {
-    itemid, title, category, removeBook,
+    itemid, title, category,
   } = props;
+  const dispatch = useDispatch();
   const handleRemove = () => {
-    removeBook(itemid);
+    dispatch(removeBook(itemid));
   };
   return (
     <div className="book-container">

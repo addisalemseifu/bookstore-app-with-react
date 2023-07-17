@@ -1,14 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Bookstate from './Bookstate';
 import Creatbook from './Creatbook';
 
 export default function Booklist() {
-  const arr = [];
-  // {if(arr===[]) {
-  //   return(
-  //     <h2>Cart is empty</h2>
-  //   )
-  // }}
+  const { books } = useSelector((store) => store.book);
 
   return (
     <section className="cart">
@@ -16,10 +12,10 @@ export default function Booklist() {
         <h2>your bag</h2>
       </header>
       <div>
-        {arr.map((item) => (
+        {books.map((item) => (
           <Bookstate
-            key={item.id}
-            itemid={item.id}
+            key={item.item_id}
+            itemid={item.item_id}
             title={item.title}
             category={item.category}
           />

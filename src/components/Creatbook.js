@@ -1,9 +1,11 @@
 import { React, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/bookSlice';
 
 export default function Creatbook() {
-  const bookArr = [];
   const [title, setTitle] = useState('');
   const [catagory, setCatagory] = useState('');
+  const dispatch = useDispatch();
 
   function catagoryHandler(e) {
     setCatagory(e.target.value);
@@ -17,9 +19,9 @@ export default function Creatbook() {
     const bookDetail = {
       title,
       category: catagory,
-      id: Math.random(),
+      item_id: Math.random(),
     };
-    bookArr.push(bookDetail);
+    dispatch(addBook(bookDetail));
   }
   return (
     <footer>
