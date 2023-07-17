@@ -29,7 +29,7 @@
 
 # 📖  Bookstore website setup.<a name="about-project"></a>
 
-> This is the Setup part of the Bookstore-With-React Project.
+> This is the implementation of Redux Toolkit part of the bookstore project.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -39,6 +39,7 @@
 - Webpack
 - React
 - React Router
+- Redux Toolkit
 
 <!--  KEY FEATURES -->
 
@@ -89,6 +90,13 @@
   </ul>
 </details>
 
+<details>
+  <summary>Redux Toolkit </summary>
+  <ul>
+    <li><a href="https://redux-toolkit.js.org/">Redux Toolkit </a></li>
+  </ul>
+</details>
+
 ### Key Features <a name="key-features"></a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -127,7 +135,7 @@ Open the project using a live server extension that can be found into your code 
 Install npm packages with:
 
 ```
-  cd my-calc
+  cd bookstore-app-with-react
 
 ```
 
