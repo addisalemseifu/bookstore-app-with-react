@@ -39,6 +39,7 @@
 - Webpack
 - React
 - React Router
+- Redux
 - Redux Toolkit
 
 <!--  KEY FEATURES -->
