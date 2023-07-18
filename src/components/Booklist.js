@@ -10,9 +10,6 @@ export default function Booklist() {
 
   return (
     <section className="cart">
-      <header>
-        <h2>your bag</h2>
-      </header>
       <div>
         {bookKey.map((key) => (books[key].map((item) => (
           <Bookstate

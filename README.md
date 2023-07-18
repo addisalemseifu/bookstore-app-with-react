@@ -29,7 +29,7 @@
 
 # 📖  Bookstore website setup.<a name="about-project"></a>
 
-> This is the Connecting with API part of the bookstore project.
+> This is a Bookstore App developed with React and Redux/toolkit that use BookstoreApi as a database and allows the user to add books and remove books from his cart.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -57,7 +57,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](Comming Soon...)
+- [[Live Demo Link](https://bookstore-app-99rq.onrender.com)]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
