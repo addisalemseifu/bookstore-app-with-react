@@ -5,6 +5,10 @@ import Creatbook from './Creatbook';
 
 export default function Booklist() {
   const { books } = useSelector((store) => store.book);
+  console.log(books)
+
+  const bookKey = Object.keys(books);
+  console.log(bookKey)
 
   return (
     <section className="cart">
@@ -12,14 +16,15 @@ export default function Booklist() {
         <h2>your bag</h2>
       </header>
       <div>
-        {books.map((item) => (
+        {bookKey.map((key) => (books[key].map((item) => (
           <Bookstate
             key={item.item_id}
-            itemid={item.item_id}
+            itemid={key}
             title={item.title}
+            author={item.author}
             category={item.category}
           />
-        ))}
+          ))))}
       </div>
       <Creatbook />
     </section>

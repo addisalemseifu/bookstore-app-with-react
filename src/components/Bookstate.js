@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/bookSlice';
+import { deleteData, getBooks } from '../redux/books/bookSlice';
 
 export default function Bookstate(props) {
   const {
     itemid, title, category,
   } = props;
+  console.log(title)
+  const [deleter, setDelete] = useState('Remove');
   const dispatch = useDispatch();
-  const handleRemove = () => {
-    dispatch(removeBook(itemid));
-  };
+  function deleteDispatcher(itemid) {
+    dispatch(deleteData(itemid));
+    setDelete('...deleting');
+    setTimeout(() => {
+      dispatch(getBooks());
+      setDelete('Delete');
+    }, 1000);
+  }
   return (
     <div className="book-container">
       <div className="book-detail-container">
@@ -26,9 +33,13 @@ export default function Bookstate(props) {
           <button
             className="detail-btn"
             type="button"
-            onClick={handleRemove}
+            onClick={(e) => {
+              e.preventDefault();
+              console.log(itemid)
+              deleteDispatcher(itemid);
+            }}
           >
-            Delete
+            {deleter}
           </button>
           <span />
           <button

@@ -1,10 +1,11 @@
 import { React, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/bookSlice';
+import { getBooks, postData } from '../redux/books/bookSlice';
 
 export default function Creatbook() {
   const [title, setTitle] = useState('');
   const [catagory, setCatagory] = useState('');
+  const [pending, setPending] = useState('Add Book');
   const dispatch = useDispatch();
 
   function catagoryHandler(e) {
@@ -21,7 +22,12 @@ export default function Creatbook() {
       category: catagory,
       item_id: Math.random(),
     };
-    dispatch(addBook(bookDetail));
+    setPending('...Adding');
+    dispatch(postData(bookDetail));
+    setTimeout(() => {
+      dispatch(getBooks());
+      setPending('Add Book');
+    }, 1000);
   }
   return (
     <footer>
@@ -57,7 +63,7 @@ export default function Creatbook() {
             postDispatcher();
           }}
         >
-          Add-Book
+          {pending}
         </button>
       </div>
     </footer>
