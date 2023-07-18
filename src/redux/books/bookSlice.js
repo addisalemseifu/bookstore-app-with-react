@@ -4,7 +4,7 @@ import axios from 'axios';
 const dataUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/McvW73kTCQbVPzcD7S2A/books';
 
 export const getBooks = createAsyncThunk('book/getBooks', () => axios.get(dataUrl)
-  .then((res) =>res.data)
+  .then((res) => res.data)
   .catch((err) => console.log(err)));
 
 export const postData = createAsyncThunk('book/postData', async (bookDetail) => axios.post(' https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/McvW73kTCQbVPzcD7S2A/books ', {
@@ -25,7 +25,7 @@ export const deleteData = createAsyncThunk('book/deleteData', async (itemid) => 
   headers: {
     'Content-type': 'application/json',
   },
-}).then((response) =>response).catch((err) => console.log(err)));
+}).then((response) => response).catch((err) => console.log(err)));
 
 const initialState = {
   books: [],

@@ -6,7 +6,6 @@ export default function Bookstate(props) {
   const {
     itemid, title, category,
   } = props;
-  console.log(title)
   const [deleter, setDelete] = useState('Remove');
   const dispatch = useDispatch();
   function deleteDispatcher(itemid) {
@@ -35,7 +34,7 @@ export default function Bookstate(props) {
             type="button"
             onClick={(e) => {
               e.preventDefault();
-              console.log(itemid)
+              console.log(itemid);
               deleteDispatcher(itemid);
             }}
           >

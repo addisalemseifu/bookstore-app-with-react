@@ -5,10 +5,8 @@ import Creatbook from './Creatbook';
 
 export default function Booklist() {
   const { books } = useSelector((store) => store.book);
-  console.log(books)
 
   const bookKey = Object.keys(books);
-  console.log(bookKey)
 
   return (
     <section className="cart">
@@ -24,7 +22,7 @@ export default function Booklist() {
             author={item.author}
             category={item.category}
           />
-          ))))}
+        ))))}
       </div>
       <Creatbook />
     </section>
