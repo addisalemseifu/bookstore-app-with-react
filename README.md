@@ -29,7 +29,7 @@
 
 # 📖  Bookstore website setup.<a name="about-project"></a>
 
-> This is the implementation of Redux Toolkit part of the bookstore project.
+> This is the Connecting with API part of the bookstore project.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -41,6 +41,7 @@
 - React Router
 - Redux
 - Redux Toolkit
+- Bookstore API 
 
 <!--  KEY FEATURES -->
 
@@ -98,6 +99,13 @@
   </ul>
 </details>
 
+<details>
+  <summary>Bookstore API  </summary>
+  <ul>
+    <li><a href="https://www.notion.so/Bookstore-API-51ea269061f849118c65c0a53e88a739">Bookstore API  </a></li>
+  </ul>
+</details>
+
 ### Key Features <a name="key-features"></a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -121,7 +129,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```
-https://github.com/addisalemseifu/my-calc.git
+https://github.com/addisalemseifu/bookstore-app-with-react.git
 
 ```
 
